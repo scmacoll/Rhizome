@@ -59,6 +59,9 @@
       <th class="w-6"></th>
     </tr>
     </tbody>
+    <tfoot>
+    
+    </tfoot>
   </table>
 </div>
 
