@@ -9,7 +9,7 @@
       <th class="border-y border-r border-black">A</th>
       <th class="border-y border-r border-black">B</th>
       <th class="border-y border-r border-black">C</th>
-      <th class="w-6 border-primary border-dotted border-r"></th>
+      <th class="w-6 border-white border-primary border-r"></th>
       <th class="w-6"></th>
       <th class="border-y border-x border-black">A</th>
     </tr>
@@ -21,7 +21,7 @@
       <td class="border-r border-b border-black">Label</td>
       <td class="border-r border-b border-black">Properties</td>
       <td class="border-r border-b border-black">Relationship</td>
-      <th class="w-6 border-primary border-dotted border-r"></th>
+      <th class="w-6 border-white border-primary border-r"></th>
       <th class="w-6"></th>
       <td class="border-x border-b border-black">Cypher</td>
     </tr>
@@ -31,9 +31,9 @@
       <td class="bg-base-200 border-r border-b border-black">Cy Ganderton</td>
       <td class="bg-base-200 border-r border-b border-black">Quality Control Specialist</td>
       <td class="bg-base-200 border-r border-b border-black">Blue</td>
-      <th class="w-6 border-primary border-dotted border-r"></th>
+      <th class="w-6 border-white border-primary border-r"></th>
       <th class="w-6"></th>
-      <td class="bg-base-200 border-x border-b border-black">
+      <td class="bg-base-200 border-x border-b border-black text-center">
         CREATE (john:Person &123;name: 'John', age: 30&125;)
         CREATE (alice:Person &123;name: 'Alice', age: 25&125;)
         CREATE (john)-[:KNOWS]->(alice)
@@ -46,8 +46,10 @@
       <td class="border-r border-b border-black">Hart Hagerty</td>
       <td class="border-r border-b border-black">Desktop Support Technician</td>
       <td class="border-r border-b border-black">Purple</td>
-      <th class="w-6 border-primary border-dotted border-r"></th>
+      <th class="w-6 border-white border-primary border-r"></th>
       <th class="w-6"></th>
+      <td class="border-x border-b border-black text-center opacity-0">
+      </td>
     </tr>
     <!-- row 3 -->
     <tr class="">
@@ -55,12 +57,15 @@
       <td class="bg-base-200 border-r border-b border-black">Brice Swyre</td>
       <td class="bg-base-200 border-r border-b border-black">Tax Accountant</td>
       <td class="bg-base-200 border-r border-b border-black">Red</td>
-      <th class="w-6 border-primary border-dotted border-r"></th>
+      <th class="w-6 border-white border-primary border-r"></th>
       <th class="w-6"></th>
+      <td class="bg-base-200 border-x border-b border-black text-center">
+        <p class="opacity-0"></p>
+      </td>
     </tr>
     </tbody>
     <tfoot>
-    
+
     </tfoot>
   </table>
 </div>
