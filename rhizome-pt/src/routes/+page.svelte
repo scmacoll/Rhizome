@@ -4,42 +4,42 @@
   <table class="text-xs table-auto table-xs w-fit">
     <!-- head -->
     <thead class="">
-    <tr class="border-opacity-30 border- border-base-content text-center uppercase text-neutral-content">
-      <th class="bg-neutral border border-opacity-50 border-base-content">in</th>
+    <tr class="border-opacity-30 border-base-content text-center uppercase text-neutral-content">
+      <th class="bg-neutral border-opacity-50 border-base-content">in</th>
       <th class="">A</th>
-      <th class="bg-neutral border-y border-r border-opacity-50 border-base-content">B</th>
-      <th class="bg-neutral border-y border-r border-opacity-50 border-base-content">C</th>
+      <th class="bg-neutral border-opacity-50 border-base-content">B</th>
+      <th class="bg-neutral border-opacity-50 border-base-content">C</th>
       <th class="w-6 border-r border-base-content border-opacity-70"></th>
       <th class="w-6"></th>
-      <th class="bg-neutral border-y border-x border-opacity-50 border-base-content">output</th>
+      <th class="bg-neutral border-opacity-50 border-base-content">output</th>
     </tr>
     </thead>
     <tbody>
     <!-- row 1 -->
     <tr class="font-bold text-center">
-      <th class="text-start font-normal text-xs border-r border-b border-opacity-30 border-base-content">N4J</th>
+      <th class="text-start font-normal text-xs border-opacity-30 border-base-content">N4J</th>
       <td class="border-base-content ">Label</td>
-      <td class="border-r border-b border-opacity-30 border-base-content ">Properties</td>
-      <td class=" border-r border-b border-opacity-30 border-base-content ">Relationship</td>
+      <td class="border-opacity-30 border-base-content ">Properties</td>
+      <td class=" border-opacity-30 border-base-content ">Relationship</td>
       <th class="w-6 border-r border-base-content border-opacity-70"></th>
       <th class="w-6"></th>
-      <td class="border-x border-b border-opacity-30 border-base-content ">Cypher</td>
+      <td class="border-opacity-30 border-base-content ">Cypher</td>
     </tr>
     <!-- row 1 -->
     <tr class="text-neutral-content">
-      <th class="bg-neutral text-start border-r border-b border-opacity-30 border-base-content">1</th>
-      <td class="bg-neutral border-r border-b border-opacity-30 border-base-content hover:bg-gray-500 hover:bg-opacity-20">
+      <th class="bg-neutral text-start border-opacity-30 border-base-content">1</th>
+      <td class="bg-neutral border-opacity-30 border-base-content hover:bg-gray-500 hover:bg-opacity-20">
         <input type="text" placeholder="" class="cell"/>
       </td>
-      <td class="bg-neutral border-r border-b border-opacity-30 border-base-content hover:bg-gray-500 hover:bg-opacity-20">
+      <td class="bg-neutral border-opacity-30 border-base-content hover:bg-gray-500 hover:bg-opacity-20">
         <input type="text" placeholder="" class="cell"/>
       </td>
-      <td class="bg-neutral border-r border-b border-opacity-30 border-base-content hover:bg-gray-500 hover:bg-opacity-20">
+      <td class="bg-neutral border-opacity-30 border-base-content hover:bg-gray-500 hover:bg-opacity-20">
         <input type="text" placeholder="" class="cell"/>
       </td>
       <th class="w-6 border-r border-base-content border-opacity-70"></th>
       <th class="w-6"></th>
-      <td class="bg-neutral border-x border-b border-opacity-30 border-base-content hover:bg-gray-500 hover:bg-opacity-20">
+      <td class="bg-neutral border-opacity-30 border-base-content hover:bg-gray-500 hover:bg-opacity-20">
         <code class="">
           CREATE (john:Person &123;name: 'John', age: 30&125;)<br>
           CREATE (alice:Person &123;name: 'Alice', age: 25&125;)<br>
@@ -49,36 +49,36 @@
     </tr>
     <!-- row 2 -->
     <tr class="">
-      <th class="text-start border-r border-b border-opacity-30 border-base-content">2</th>
-      <td class="border-r border-b border-opacity-30 border-base-content hover:bg-gray-500 hover:bg-opacity-20">
+      <th class="text-start border-opacity-30 border-base-content">2</th>
+      <td class="border-opacity-30 border-base-content hover:bg-gray-500 hover:bg-opacity-20">
         <input type="text" placeholder="" class="cell"/>
       </td>
-      <td class="border-r border-b border-opacity-30 border-base-content hover:bg-gray-500 hover:bg-opacity-20">
+      <td class="border-opacity-30 border-base-content hover:bg-gray-500 hover:bg-opacity-20">
         <input type="text" placeholder="" class="cell"/>
       </td>
-      <td class="border-r border-b border-opacity-30 border-base-content hover:bg-gray-500 hover:bg-opacity-20">
+      <td class="border-opacity-30 border-base-content hover:bg-gray-500 hover:bg-opacity-20">
         <input type="text" placeholder="" class="cell"/>
       </td>
       <th class="w-6 border-r border-base-content border-opacity-70"></th>
       <th class="w-6"></th>
-      <td class="border-x border-b border-opacity-30 border-base-content text-center opacity-0">
+      <td class="border-opacity-30 border-base-content text-center opacity-0">
       </td>
     </tr>
     <!-- row 3 -->
     <tr class="text-neutral-content">
-      <th class="bg-neutral text-start border-r border-b border-opacity-30 border-base-content">3</th>
-      <td class="bg-neutral border-r border-b border-opacity-30 border-base-content hover:bg-gray-500 hover:bg-opacity-20">
+      <th class="bg-neutral text-start border-opacity-30 border-base-content">3</th>
+      <td class="bg-neutral border-opacity-30 border-base-content hover:bg-gray-500 hover:bg-opacity-20">
         <input type="text" placeholder="" class="cell"/>
       </td>
-      <td class="bg-neutral border-r border-b border-opacity-30 border-base-content hover:bg-gray-500 hover:bg-opacity-20">
+      <td class="bg-neutral border-opacity-30 border-base-content hover:bg-gray-500 hover:bg-opacity-20">
         <input type="text" placeholder="" class="cell"/>
       </td>
-      <td class="bg-neutral border-r border-b border-opacity-30 border-base-content hover:bg-gray-500 hover:bg-opacity-20">
+      <td class="bg-neutral border-opacity-30 border-base-content hover:bg-gray-500 hover:bg-opacity-20">
         <input type="text" placeholder="" class="cell"/>
       </td>
       <th class="w-6 border-r border-base-content border-opacity-70"></th>
       <th class="w-6"></th>
-      <td class="bg-neutral border-x border-b border-opacity-30 border-base-content text-center">
+      <td class="bg-neutral border-opacity-30 border-base-content text-center">
         <p class="opacity-0"></p>
       </td>
     </tr>
