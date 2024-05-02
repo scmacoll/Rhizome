@@ -1,133 +1,458 @@
-<h1 class="text-3xl font-bold p-2">Rhizome</h1>
-<div class="py-4"></div>
-<div class="overflow-hidden">
-  <table class="border-collapse text-xs table-auto table-xs w-fit">
-    <!-- head -->
-    <thead class="">
-    <tr class="border-opacity-30 border-base-content text-center uppercase text-neutral-content">
-      <th class="border bg-neutral border-opacity-50 border-base-content">in</th>
-      <th class="border border-b-4 border-base-content bg-neutral border-opacity-50">A</th>
-      <th class="border border-b-4 bg-neutral border-opacity-50 border-base-content">B</th>
-      <th class="border border-b-4 bg-neutral border-opacity-50 border-base-content">C</th>
-      <th class="w-6 border-r border-base-content border-opacity-70"></th>
-      <th class="w-6"></th>
-      <th class="border border-b-4 bg-neutral border-opacity-50 border-base-content">output</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr class="font-bold text-center">
-      <th class="text-start font-normal text-xs border border-r-4 border-opacity-50 border-base-content bg-primary text-primary-content">N4J</th>
-      <td class="border border-opacity-50 border-base-content">Label</td>
-      <td class="border border-opacity-50 border-base-content">Properties</td>
-      <td class="border border-opacity-50 border-base-content">Relationship</td>
-      <th class="w-6 border-r border-base-content border-opacity-70"></th>
-      <th class="w-6"></th>
-      <td class="border border-opacity-50 border-base-content">Cypher</td>
-    </tr>
-    <!-- row 1 -->
-    <tr class="text-neutral-content">
-      <th class="bg-neutral text-start border-r-4 border-opacity-50 border-base-content">1</th>
-      <td class="bg-neutral border-x border-opacity-50 border-base-content hover:bg-gray-500 hover:bg-opacity-20">
-        <input type="text" placeholder="" class="cell"/>
-      </td>
-      <td class="bg-neutral border-x border-opacity-50 border-base-content hover:bg-gray-500 hover:bg-opacity-20">
-        <input type="text" placeholder="" class="cell"/>
-      </td>
-      <td class="bg-neutral border-x border-opacity-50 border-base-content hover:bg-gray-500 hover:bg-opacity-20">
-        <input type="text" placeholder="" class="cell"/>
-      </td>
-      <th class="w-6 border-r border-base-content border-opacity-70"></th>
-      <th class="w-6"></th>
-      <td class="py-2 bg-neutral border-x border-opacity-50 border-base-content hover:bg-gray-500 hover:bg-opacity-20">
-        <code class="">
-          CREATE (john:Person &123;name: 'John', age: 30&125;)<br>
-          CREATE (alice:Person &123;name: 'Alice', age: 25&125;)<br>
-          CREATE (john)-[:KNOWS]->(alice)<br>
-          CREATE (alice)-[:KNOWS]->(john)</code>
-      </td>
-    </tr>
-    <!-- row 2 -->
-    <tr class="">
-      <th class="text-start border-r-4 border-opacity-50 border-base-content">2</th>
-      <td class="border-x border-opacity-50 border-base-content hover:bg-gray-500 hover:bg-opacity-20">
-        <input type="text" placeholder="" class="cell"/>
-      </td>
-      <td class="border-x border-opacity-50 border-base-content hover:bg-gray-500 hover:bg-opacity-20">
-        <input type="text" placeholder="" class="cell"/>
-      </td>
-      <td class="border-x border-opacity-50 border-base-content hover:bg-gray-500 hover:bg-opacity-20">
-        <input type="text" placeholder="" class="cell"/>
-      </td>
-      <th class="w-6 border-r border-base-content border-opacity-70"></th>
-      <th class="w-6"></th>
-      <td class="border-x border-opacity-50 border-base-content text-center opacity-0">
-      </td>
-    </tr>
-    <!-- row 3 -->
-    <tr class="text-neutral-content">
-      <th class="bg-neutral text-start border-r-4 border-opacity-50 border-base-content">3</th>
-      <td class="bg-neutral border-x border-opacity-50 border-base-content hover:bg-gray-500 hover:bg-opacity-20">
-        <input type="text" placeholder="" class="cell"/>
-      </td>
-      <td class="bg-neutral border-x border-opacity-50 border-base-content hover:bg-gray-500 hover:bg-opacity-20">
-        <input type="text" placeholder="" class="cell"/>
-      </td>
-      <td class="bg-neutral border-x border-opacity-50 border-base-content hover:bg-gray-500 hover:bg-opacity-20">
-        <input type="text" placeholder="" class="cell"/>
-      </td>
-      <th class="w-6 border-r border-base-content border-opacity-70"></th>
-      <th class="w-6"></th>
-      <td class="bg-neutral border-x border-opacity-50 border-base-content text-center">
-        <p class="opacity-0"></p>
-      </td>
-    </tr>
-    <!-- last row -->
-    <tr class="text-neutral-content">
-      <th class="border-t border-opacity-50 border-base-content"></th>
-      <td class="border-t border-opacity-50 border-base-content">
-      </td>
-      <td class="border-t border-opacity-50 border-base-content">
-      </td>
-      <td class="border-t border-opacity-50 border-base-content">
-        <input type="text" placeholder="" class="cell"/>
-      </td>
-      <th class="w-6"></th>
-      <th class="w-6"></th>
-      <td class="border-t border-opacity-50 border-base-content">
-        <p class="opacity-0"></p>
-      </td>
-    </tr>
-    </tbody>
-    <tfoot>
+<!-- YOU CAN DELETE EVERYTHING IN THIS PAGE -->
 
-    </tfoot>
-  </table>
+<div class="container h-full p-4">
+	<div class="space-y-5">
+		<h1 class="h1 font-alliance-mono">Rhizome</h1>
+	</div>
+	<div class="py-2"></div>
+	<table class="w-fit text-sm text-left">
+		<thead class="text-xs uppercase border-b text-center">
+		<tr class="font-alliance-mono">
+			<th scope="col" class="py-3 px-4">IN</th> <!-- Empty top-left corner cell -->
+			<th scope="col" class="py-3 px-4">A</th>
+			<th scope="col" class="py-3 px-4">B</th>
+			<th scope="col" class="py-3 px-4">C</th>
+		</tr>
+		</thead>
+		<tbody>
+		<tr class="font-alliance border-b-[.5px]  text-surface-content">
+			<th scope="row" class="py-4 px-4 font-medium font-alliance-mono text-xs whitespace-nowrap">N4J</th>
+			<td class="py-4 px-4">Label</td>
+			<td class="py-4 px-4">Properties</td>
+			<td class="py-4 px-4">Relationship</td>
+		</tr>
+		<tr class="border-b-[.5px]">
+			<th scope="row" class="py-4 px-4 font-alliance-mono font-medium whitespace-nowrap">1</th>
+			<td class="py-4 px-4"></td> <!-- Empty because no data is specified for A1, B1, C1 -->
+			<td class="py-4 px-4"></td>
+			<td class="py-4 px-4"></td>
+		</tr>
+		<tr class="border-b-[.5px]">
+			<th scope="row" class="py-4 px-4 font-alliance-mono font-medium whitespace-nowrap">2</th>
+			<td class="py-4 px-4"></td> <!-- Empty cells for row 3 -->
+			<td class="py-4 px-4"></td>
+			<td class="py-4 px-4"></td>
+		</tr>
+		<tr class="border-b-[.5px]">
+			<th scope="row" class="py-4 px-4 font-alliance-mono font-medium whitespace-nowrap">3</th>
+			<td class="py-4 px-4"></td> <!-- Empty cells for row 3 -->
+			<td class="py-4 px-4"></td>
+			<td class="py-4 px-4"></td>
+		</tr>
+		</tbody>
+	</table>
+
 </div>
 
-<style lang="postcss">
+<div class="py-4"></div>
+<!-- design proto 2 -->
 
-  .cell {
-      /* Focus styles */
-      --tw-ring-opacity: 0;
-      --tw-ring-offset-width: 0px;
-      --tw-ring-offset-color: #fff;
-      --tw-ring-color: rgba(59, 130, 246, 0);
-      --tw-ring-offset-shadow: 0 0 #0000;
-      --tw-ring-shadow: 0 0 #0000;
-      outline: 2px solid transparent;
-      outline-offset: 2px;
-      border-color: rgba(229, 231, 235, 0);
+<div class="container h-full p-4">
+	<div class="space-y-5">
+		<h1 class="h1 font-alliance-mono">Rhizome</h1>
+	</div>
+	<div class="py-4"></div>
+	<table class="w-fit text-sm text-left border-[.5px]">
+		<thead class="text-xs uppercase border-b text-center">
+		<tr class="font-alliance-mono">
+			<th scope="col" class="py-3 px-4 border-r">IN</th> <!-- Empty top-left corner cell -->
+			<th scope="col" class="py-3 px-4">A</th>
+			<th scope="col" class="py-3 px-4">B</th>
+			<th scope="col" class="py-3 px-4">C</th>
+		</tr>
+		</thead>
+		<tbody>
+		<tr class="font-alliance border-b-[.5px] text-surface-content">
+			<th scope="row" class="py-4 px-4 font-medium font-alliance-mono text-xs whitespace-nowrap border-r">N4J</th>
+			<td class="py-4 px-4">Label</td>
+			<td class="py-4 px-4">Properties</td>
+			<td class="py-4 px-4">Relationship</td>
+		</tr>
+		<tr class="border-b-[.5px]">
+			<th scope="row" class="py-4 px-4 font-alliance-mono font-medium whitespace-nowrap border-r text-center">1</th>
+			<td class="py-4 px-4"></td> <!-- Empty because no data is specified for A1, B1, C1 -->
+			<td class="py-4 px-4"></td>
+			<td class="py-4 px-4"></td>
+		</tr>
+		<tr class="border-b-[.5px]">
+			<th scope="row" class="py-4 px-4 font-alliance-mono font-medium whitespace-nowrap border-r text-center">2</th>
+			<td class="py-4 px-4"></td> <!-- Empty cells for row 3 -->
+			<td class="py-4 px-4"></td>
+			<td class="py-4 px-4"></td>
+		</tr>
+		<tr class="border-b-[.5px]">
+			<th scope="row" class="py-4 px-4 font-alliance-mono font-medium whitespace-nowrap border-r text-center">3</th>
+			<td class="py-4 px-4"></td> <!-- Empty cells for row 3 -->
+			<td class="py-4 px-4"></td>
+			<td class="py-4 px-4"></td>
+		</tr>
+		</tbody>
+	</table>
+</div>
 
-      /* Text styling */
-      font-size: 0.75rem; /* equivalent to text-xs */
-      font-weight: normal; /* equivalent to font-normal */
+<div class="py-4"></div>
+<!-- design proto 3 -->
 
-      /* Background opacity */
-      background-color: rgba(0, 0, 0, 0); /* equivalent to bg-opacity-0 */
+<div class="container h-full p-4">
+	<div class="space-y-5">
+		<h1 class="h1 font-alliance-mono">Rhizome</h1>
+	</div>
+	<div class="py-4"></div>
+	<table class="w-fit text-sm text-left border-[.5px]">
+		<thead class="text-xs uppercase border-b text-center">
+		<tr class="font-alliance-mono">
+			<th scope="col" class="py-3 px-4 border-r">IN</th> <!-- Empty top-left corner cell -->
+			<th scope="col" class="py-3 px-4">A</th>
+			<th scope="col" class="py-3 px-4">B</th>
+			<th scope="col" class="py-3 px-4">C</th>
+		</tr>
+		</thead>
+		<tbody>
+		<tr class="font-alliance border-b-[.5px] text-surface-content">
+			<th scope="row" class="py-4 px-4 font-medium font-alliance-mono text-xs whitespace-nowrap">N4J</th>
+			<td class="py-4 px-4">Label</td>
+			<td class="py-4 px-4">Properties</td>
+			<td class="py-4 px-4">Relationship</td>
+		</tr>
+		<tr class="">
+			<th scope="row" class="py-4 px-4 font-alliance-mono font-medium whitespace-nowrap border-r text-center">1</th>
+			<td class="py-4 px-4"></td> <!-- Empty because no data is specified for A1, B1, C1 -->
+			<td class="py-4 px-4"></td>
+			<td class="py-4 px-4"></td>
+		</tr>
+		<tr class="">
+			<th scope="row" class="py-4 px-4 font-alliance-mono font-medium whitespace-nowrap border-r text-center">2</th>
+			<td class="py-4 px-4"></td> <!-- Empty cells for row 3 -->
+			<td class="py-4 px-4"></td>
+			<td class="py-4 px-4"></td>
+		</tr>
+		<tr class="">
+			<th scope="row" class="py-4 px-4 font-alliance-mono font-medium whitespace-nowrap border-r text-center">3</th>
+			<td class="py-4 px-4"></td> <!-- Empty cells for row 3 -->
+			<td class="py-4 px-4"></td>
+			<td class="py-4 px-4"></td>
+		</tr>
+		</tbody>
+	</table>
+</div>
 
-      /* Width settings */
-      width: 100%; /* equivalent to w-full */
-      max-width: 20rem; /* equivalent to max-w-xs */
-  }
+<div class="py-4"></div>
+<!-- design proto 4 -->
+
+<div class="container h-full p-4">
+	<div class="space-y-5">
+		<h1 class="h1 font-alliance-mono">Rhizome</h1>
+	</div>
+	<div class="py-4"></div>
+	<table class="w-fit text-sm text-left border-[.5px]">
+		<thead class="text-xs uppercase border-b text-center">
+		<tr class="font-alliance-mono">
+			<th scope="col" class="py-3 px-4 border-r">IN</th> <!-- Empty top-left corner cell -->
+			<th scope="col" class="py-3 px-4 border-r-[.5px]">A</th>
+			<th scope="col" class="py-3 px-4 border-r-[.5px]">B</th>
+			<th scope="col" class="py-3 px-4">C</th>
+		</tr>
+		</thead>
+		<tbody>
+		<tr class="font-alliance border-b-[.5px] text-surface-content">
+			<th scope="row" class="py-4 px-4 font-medium font-alliance-mono text-xs whitespace-nowrap border-r">N4J</th>
+			<td class="py-4 px-4 border-r-[.5px]">Label</td>
+			<td class="py-4 px-4 border-r-[.5px]">Properties</td>
+			<td class="py-4 px-4">Relationship</td>
+		</tr>
+		<tr class="border-b-[.5px]">
+			<th scope="row" class="py-4 px-4 font-alliance-mono font-medium whitespace-nowrap border-r text-center">1</th>
+			<td class="py-4 px-4 border-r-[.5px]"></td> <!-- Empty because no data is specified for A1, B1, C1 -->
+			<td class="py-4 px-4 border-r-[.5px]"></td>
+			<td class="py-4 px-4"></td>
+		</tr>
+		<tr class="border-b-[.5px]">
+			<th scope="row" class="py-4 px-4 font-alliance-mono font-medium whitespace-nowrap border-r text-center">2</th>
+			<td class="py-4 px-4 border-r-[.5px]"></td> <!-- Empty cells for row 3 -->
+			<td class="py-4 px-4 border-r-[.5px]"></td>
+			<td class="py-4 px-4"></td>
+		</tr>
+		<tr class="border-b-[.5px]">
+			<th scope="row" class="py-4 px-4 font-alliance-mono font-medium whitespace-nowrap border-r text-center">3</th>
+			<td class="py-4 px-4 border-r-[.5px]"></td> <!-- Empty cells for row 3 -->
+			<td class="py-4 px-4 border-r-[.5px]"></td>
+			<td class="py-4 px-4"></td>
+		</tr>
+		</tbody>
+	</table>
+</div>
+
+<div class="py-4"></div>
+<!-- design proto 5 -->
+
+<div class="container h-full p-4">
+	<div class="space-y-5">
+		<h1 class="h1 font-alliance-mono">Rhizome</h1>
+	</div>
+	<div class="py-4"></div>
+	<table class="w-fit text-sm text-left">
+		<thead class="text-xs uppercase text-center">
+		<tr class="font-alliance-mono">
+			<th scope="col" class="py-3 px-4">IN</th> <!-- Empty top-left corner cell -->
+			<th scope="col" class="py-3 px-4">A</th>
+			<th scope="col" class="py-3 px-4">B</th>
+			<th scope="col" class="py-3 px-4">C</th>
+		</tr>
+		</thead>
+		<tbody>
+		<tr class="font-alliance border-b-[.5px] text-surface-content">
+			<th scope="row" class="py-4 px-4 font-medium font-alliance-mono text-xs whitespace-nowrap border-r-[.5px]">N4J</th>
+			<td class="py-4 px-4">Label</td>
+			<td class="py-4 px-4">Properties</td>
+			<td class="py-4 px-4">Relationship</td>
+		</tr>
+		<tr class="">
+			<th scope="row" class="py-4 px-4 font-alliance-mono font-medium whitespace-nowrap border-r text-center">1</th>
+			<td class="py-4 px-4"></td> <!-- Empty because no data is specified for A1, B1, C1 -->
+			<td class="py-4 px-4"></td>
+			<td class="py-4 px-4"></td>
+		</tr>
+		<tr class="">
+			<th scope="row" class="py-4 px-4 font-alliance-mono font-medium whitespace-nowrap border-r text-center">2</th>
+			<td class="py-4 px-4"></td> <!-- Empty cells for row 3 -->
+			<td class="py-4 px-4"></td>
+			<td class="py-4 px-4"></td>
+		</tr>
+		<tr class="">
+			<th scope="row" class="py-4 px-4 font-alliance-mono font-medium whitespace-nowrap border-r text-center">3</th>
+			<td class="py-4 px-4"></td> <!-- Empty cells for row 3 -->
+			<td class="py-4 px-4"></td>
+			<td class="py-4 px-4"></td>
+		</tr>
+		</tbody>
+	</table>
+</div>
+
+
+<div class="py-4"></div>
+<!-- design proto 6 -->
+
+<div class="container h-full p-4">
+	<div class="space-y-5">
+		<h1 class="h1 font-alliance-mono">Rhizome</h1>
+	</div>
+	<div class="py-4"></div>
+	<table class="w-fit text-sm text-left">
+		<thead class="text-xs uppercase text-center">
+		<tr class="font-alliance-mono text-surface-content">
+			<th scope="col" class="py-3 px-4">IN</th> <!-- Empty top-left corner cell -->
+			<th scope="col" class="py-3 px-4">A</th>
+			<th scope="col" class="py-3 px-4">B</th>
+			<th scope="col" class="py-3 px-4">C</th>
+		</tr>
+		</thead>
+		<tbody>
+		<tr class="font-alliance">
+			<th scope="row" class="py-4 px-4 font-medium font-alliance-mono text-xs whitespace-nowrap border-r-[.5px]  text-surface-content">N4J</th>
+			<td class="py-4 px-4 border-y-[.5px]">Label</td>
+			<td class="py-4 px-4 border-y-[.5px]">Properties</td>
+			<td class="py-4 px-4 border-y-[.5px] border-r-[.5px]">Relationship</td>
+		</tr>
+		<tr class="">
+			<th scope="row" class="py-4 px-4 font-alliance-mono font-medium whitespace-nowrap border-r text-center text-surface-content">1</th>
+			<td class="py-4 px-4"></td> <!-- Empty because no data is specified for A1, B1, C1 -->
+			<td class="py-4 px-4"></td>
+			<td class="py-4 px-4 border-r-[.5px]"></td>
+		</tr>
+		<tr class="">
+			<th scope="row" class="py-4 px-4 font-alliance-mono font-medium whitespace-nowrap border-r text-center  text-surface-content">2</th>
+			<td class="py-4 px-4"></td> <!-- Empty cells for row 3 -->
+			<td class="py-4 px-4"></td>
+			<td class="py-4 px-4 border-r-[.5px]"></td>
+		</tr>
+		<tr class="">
+			<th scope="row" class="py-4 px-4 font-alliance-mono font-medium whitespace-nowrap border-r text-center  text-surface-content">3</th>
+			<td class="py-4 px-4 border-b-[.5px]"></td> <!-- Empty cells for row 3 -->
+			<td class="py-4 px-4 border-b-[.5px]"></td>
+			<td class="py-4 px-4 border-b-[.5px] border-r-[.5px]"></td>
+		</tr>
+		</tbody>
+	</table>
+</div>
+
+
+<div class="py-4"></div>
+<!-- design proto 7 -->
+
+<div class="container h-full p-4">
+	<div class="space-y-5">
+		<h1 class="h1 font-alliance-mono">Rhizome</h1>
+	</div>
+	<div class="py-4"></div>
+	<table class="w-fit text-sm text-left">
+		<thead class="text-xs uppercase text-center">
+		<tr class="font-alliance-mono text-surface-content">
+			<th scope="col" class="py-3 px-4">IN</th> <!-- Empty top-left corner cell -->
+			<th scope="col" class="py-3 px-4">A</th>
+			<th scope="col" class="py-3 px-4">B</th>
+			<th scope="col" class="py-3 px-4">C</th>
+		</tr>
+		</thead>
+		<tbody>
+		<tr class="font-alliance">
+			<th scope="row" class="py-4 px-4 font-medium font-alliance-mono text-xs whitespace-nowrap text-surface-content">N4J</th>
+			<td class="py-4 px-4 border-y-[.5px]">Label</td>
+			<td class="py-4 px-4 border-y-[.5px]">Properties</td>
+			<td class="py-4 px-4 border-y-[.5px]">Relationship</td>
+		</tr>
+		<tr class="">
+			<th scope="row" class="py-4 px-4 font-alliance-mono font-medium whitespace-nowrap border-r text-center text-surface-content">1</th>
+			<td class="py-4 px-4"></td> <!-- Empty because no data is specified for A1, B1, C1 -->
+			<td class="py-4 px-4"></td>
+			<td class="py-4 px-4 border-r-[.5px]"></td>
+		</tr>
+		<tr class="">
+			<th scope="row" class="py-4 px-4 font-alliance-mono font-medium whitespace-nowrap border-r text-center  text-surface-content">2</th>
+			<td class="py-4 px-4"></td> <!-- Empty cells for row 3 -->
+			<td class="py-4 px-4"></td>
+			<td class="py-4 px-4 border-r-[.5px]"></td>
+		</tr>
+		<tr class="">
+			<th scope="row" class="py-4 px-4 font-alliance-mono font-medium whitespace-nowrap border-r text-center  text-surface-content">3</th>
+			<td class="py-4 px-4 border-b-[.5px]"></td> <!-- Empty cells for row 3 -->
+			<td class="py-4 px-4 border-b-[.5px]"></td>
+			<td class="py-4 px-4 border-b-[.5px] border-r-[.5px]"></td>
+		</tr>
+		</tbody>
+	</table>
+</div>
+
+<div class="py-4"></div>
+<!-- design proto 8 -->
+
+<div class="container h-full p-4">
+	<div class="space-y-5">
+		<h1 class="h1 font-alliance-mono">Rhizome</h1>
+	</div>
+	<div class="py-4"></div>
+	<table class="w-fit text-sm text-left">
+		<thead class="text-xs uppercase text-center">
+		<tr class="font-alliance-mono text-surface-content">
+			<th scope="col" class="py-3 px-4">IN</th> <!-- Empty top-left corner cell -->
+			<th scope="col" class="py-3 px-4">A</th>
+			<th scope="col" class="py-3 px-4">B</th>
+			<th scope="col" class="py-3 px-4">C</th>
+		</tr>
+		</thead>
+		<tbody>
+		<tr class="font-alliance">
+			<th scope="row" class="py-4 px-4 font-medium font-alliance-mono text-xs whitespace-nowrap  text-surface-content">N4J</th>
+			<td class="py-4 px-4 border-y-[.5px]">Label</td>
+			<td class="py-4 px-4 border-y-[.5px]">Properties</td>
+			<td class="py-4 px-4 border-y-[.5px]">Relationship</td>
+		</tr>
+		<tr class="">
+			<th scope="row" class="py-4 px-4 font-alliance-mono font-medium whitespace-nowrap text-center text-surface-content">1</th>
+			<td class="py-4 px-4"></td> <!-- Empty because no data is specified for A1, B1, C1 -->
+			<td class="py-4 px-4"></td>
+			<td class="py-4 px-4"></td>
+		</tr>
+		<tr class="">
+			<th scope="row" class="py-4 px-4 font-alliance-mono font-medium whitespace-nowrap text-center  text-surface-content">2</th>
+			<td class="py-4 px-4"></td> <!-- Empty cells for row 3 -->
+			<td class="py-4 px-4"></td>
+			<td class="py-4 px-4"></td>
+		</tr>
+		<tr class="">
+			<th scope="row" class="py-4 px-4 font-alliance-mono font-medium whitespace-nowrap text-center  text-surface-content">3</th>
+			<td class="py-4 px-4 border-b-[.5px]"></td> <!-- Empty cells for row 3 -->
+			<td class="py-4 px-4 border-b-[.5px]"></td>
+			<td class="py-4 px-4 border-b-[.5px]"></td>
+		</tr>
+		</tbody>
+	</table>
+</div>
+
+<div class="py-4"></div>
+<!-- design proto 9 -->
+
+<div class="container h-full p-4">
+	<div class="space-y-5">
+		<h1 class="h1 font-alliance-mono">Rhizome</h1>
+	</div>
+	<div class="py-4"></div>
+	<table class="w-fit text-sm text-left">
+		<thead class="text-xs uppercase text-center">
+			<tr class="font-alliance">
+				 <td class="py-4 px-4">Label</td>
+				 <td class="py-4 px-4">Properties</td>
+				 <td class="py-4 px-4">Relationship</td>
+			</tr>
+		</thead>
+		<tbody>
+		<tr class="">
+			<td class="py-4 px-4 border-[.5px]"></td> <!-- Empty because no data is specified for A1, B1, C1 -->
+			<td class="py-4 px-4 border-[.5px]"></td>
+			<td class="py-4 px-4 border-[.5px]"></td>
+		</tr>
+		<tr class="">
+			<td class="py-4 px-4 border-[.5px]"></td> <!-- Empty cells for row 3 -->
+			<td class="py-4 px-4 border-[.5px]"></td>
+			<td class="py-4 px-4 border-[.5px]"></td>
+		</tr>
+		<tr class="">
+			<td class="py-4 px-4 border-[.5px]"></td> <!-- Empty cells for row 3 -->
+			<td class="py-4 px-4 border-[.5px]"></td>
+			<td class="py-4 px-4 border-[.5px]"></td>
+		</tr>
+		</tbody>
+	</table>
+</div>
+
+<div class="py-4"></div>
+<!-- design proto 7 -->
+
+<div class="container h-full p-4">
+	<div class="space-y-5">
+		<h1 class="h1 font-alliance-mono">Rhizome</h1>
+	</div>
+	<div class="py-4"></div>
+	<table class="w-fit text-sm text-left">
+		<thead class="text-xs uppercase text-center">
+		<tr class="font-alliance-mono text-surface-content">
+			<th scope="col" class="py-3 px-4"></th> <!-- Empty top-left corner cell -->
+			<th scope="col" class="py-3 px-4">A</th>
+			<th scope="col" class="py-3 px-4">B</th>
+			<th scope="col" class="py-3 px-4">C</th>
+		</tr>
+		</thead>
+		<tbody>
+		<tr class="font-alliance">
+			<th scope="row" class="py-4 px-4 font-medium font-alliance-mono text-xs whitespace-nowrap text-surface-content"></th>
+			<td class="py-4 px-4 border-b-[.5px]">Label</td>
+			<td class="py-4 px-4 border-b-[.5px]">Properties</td>
+			<td class="py-4 px-4 border-b-[.5px]">Relationship</td>
+		</tr>
+		<tr class="">
+			<th scope="row" class="py-4 px-4 font-alliance-mono font-medium whitespace-nowrap border-r text-center text-surface-content">1</th>
+			<td class="py-4 px-4"></td> <!-- Empty because no data is specified for A1, B1, C1 -->
+			<td class="py-4 px-4"></td>
+			<td class="py-4 px-4 border-r-[.5px]"></td>
+		</tr>
+		<tr class="">
+			<th scope="row" class="py-4 px-4 font-alliance-mono font-medium whitespace-nowrap border-r text-center  text-surface-content">2</th>
+			<td class="py-4 px-4"></td> <!-- Empty cells for row 3 -->
+			<td class="py-4 px-4"></td>
+			<td class="py-4 px-4 border-r-[.5px]"></td>
+		</tr>
+		<tr class="">
+			<th scope="row" class="py-4 px-4 font-alliance-mono font-medium whitespace-nowrap border-r text-center  text-surface-content">3</th>
+			<td class="py-4 px-4 border-b-[.5px]"></td> <!-- Empty cells for row 3 -->
+			<td class="py-4 px-4 border-b-[.5px]"></td>
+			<td class="py-4 px-4 border-b-[.5px] border-r-[.5px]"></td>
+		</tr>
+		</tbody>
+	</table>
+</div>
+
+
+<div class="py-12"></div>
+
+<style>
 
 </style>
